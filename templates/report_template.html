@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Claim Report</title>
+    <style>
+        body { font-family: Arial; margin: 2em; }
+        h1 { color: #0b5394; }
+        section { margin-bottom: 2em; }
+    </style>
+</head>
+<body>
+    <h1>Claim Report: {{ data.claim_id }}</h1>
+    <p><strong>Policyholder:</strong> {{ data.policyholder }}</p>
+    <p><strong>Policy Type:</strong> {{ data.policy_type }}</p>
+    <p><strong>Incident Date:</strong> {{ data.incident_date }}</p>
+    <p><strong>Claim Amount:</strong> ${{ data.claim_amount }}</p>
+    <p><strong>Status:</strong> {{ data.claim_status }}</p>
+
+    <section>
+        <h2>Generated Summary</h2>
+        <p>{{ data.summary | safe }}</p>
+    </section>
+</body>
+</html>
